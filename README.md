@@ -4,7 +4,7 @@ An iOS Showcase Project.
 
 ## Designed by [Designer Techcronus](https://www.uplabs.com/designer_techcronus)
 
-<img src="https://github.com/oppongjr/Login-Sample-App/blob/master/screenshots/uplabs_reference.png"
+<img src="https://github.com/oppongjr/Login-Sample-App/blob/master/screenshots/uplabs_reference.png?raw=true" />
 
 ## Screenshots
 <table>
