@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
     }
     */
     @IBAction func SignInPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     

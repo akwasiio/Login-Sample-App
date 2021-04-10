@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        // removes navbar border
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        
         let titleString = NSMutableAttributedString(string: "VETCLICK")
         
         titleString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 3, length: 5))
