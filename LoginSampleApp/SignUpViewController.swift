@@ -14,25 +14,19 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let signInText = NSMutableAttributedString(string: "Already have an account? Sign In")
         
-        signInText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black, range: NSRange(location: 25, length: 7))
+        let signInText = "Sign In"
+        let signInAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17), NSAttributedString.Key.foregroundColor: UIColor.black]
+        
+        let signInAttrString = NSMutableAttributedString(string: signInText, attributes: signInAttributes)
+        
+        let fullText = NSMutableAttributedString(string: "Already have an account? ")
+        fullText.append(signInAttrString)
     
-        signInLabel.setAttributedTitle(signInText, for: .normal)
-
-        // Do any additional setup after loading the view.
+        signInLabel.setAttributedTitle(fullText, for: .normal)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func SignInPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
