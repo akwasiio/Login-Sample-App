@@ -10,13 +10,13 @@ An iOS Showcase Project.
 <table>
   <tr>
     <td>
-      <img src="https://github.com/oppongjr/Login-Sample-App/blob/master/screenshots/login.png?raw=true" />
+      <img src="https://github.com/oppongjr/Login-Sample-App/blob/main/screenshots/login.png?raw=true" />
     </td>
     <td>
-      <img src="https://github.com/oppongjr/Login-Sample-App/blob/master/screenshots/signup.png?raw=true" />
+      <img src="https://github.com/oppongjr/Login-Sample-App/blob/main/screenshots/signup.png?raw=true" />
     </td>
     <td>
-      <img src="https://github.com/oppongjr/Login-Sample-App/blob/master/screenshots/forgot_pass.png?raw=true" />
+      <img src="https://github.com/oppongjr/Login-Sample-App/blob/main/screenshots/forgot_pass.png?raw=true" />
   </tr>
 </table>
 
