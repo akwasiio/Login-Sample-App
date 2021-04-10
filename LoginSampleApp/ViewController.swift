@@ -12,28 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var vetClickLabel: UILabel!
     @IBOutlet weak var signUpTextButton: UIButton!
     
-    
+    let redForegroundAttribute = [NSAttributedString.Key.foregroundColor : UIColor.red]
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         // removes navbar border
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         
-        let titleString = NSMutableAttributedString(string: "VETCLICK")
         
-        titleString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 3, length: 5))
-        
-        vetClickLabel.attributedText = titleString
-        
-        let signUpHere = NSMutableAttributedString(string: "Don't have an account? Sign up here")
-        
-        signUpHere.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 22, length: 13))
-        
-        signUpTextButton.setAttributedTitle(signUpHere, for: .normal)
-        super.viewDidLoad()
-        
+        setupVetString()
+        setupSignUpLabel()
     }
 
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
@@ -45,5 +36,22 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "goToSignUp", sender: self)
     }
     
+    func setupVetString() {
+        let clickString = NSMutableAttributedString(string: "CLICK", attributes: redForegroundAttribute)
+        
+        let vetString = NSMutableAttributedString(string: "VET")
+        vetString.append(clickString)
+      
+        vetClickLabel.attributedText = vetString
+    }
+    
+    func setupSignUpLabel() {
+        let signUpHereString = NSMutableAttributedString(string: "Sign up here", attributes: redForegroundAttribute)
+    
+        let fullText = NSMutableAttributedString(string: "Don't have an account? ")
+        fullText.append(signUpHereString)
+
+        signUpTextButton.setAttributedTitle(fullText, for: .normal)
+    }
 }
 

@@ -13,26 +13,15 @@ class ForgotPasswordViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        let titleString = NSMutableAttributedString(string: "VETCLICK")
-        
-        titleString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 3, length: 5))
-        
-        vetClickLabel.attributedText = titleString
-        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        let clickAttributes = [NSAttributedString.Key.foregroundColor : UIColor.red]
+        let clickString = NSMutableAttributedString(string: "CLICK", attributes: clickAttributes)
+        
+        let vetString = NSMutableAttributedString(string: "VET")
+        vetString.append(clickString)
+      
+        vetClickLabel.attributedText = vetString
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
